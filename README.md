@@ -39,12 +39,12 @@ pipenv run python index.py
 #### Sample REST calls
 
 ##### Predict
-Request:
+###### Request
 ```
 curl -d '{"signature_name" :"predict-iris",  "instances": [[1.0,2.0,5.0,0.3],[0.1,0.2,0.3,0.4]]}'  -X POST http://localhost:8501/v1/models/myiris:predict
 ```
 
-Response:
+###### Response
 ```
 {
     "predictions": [[0.257784516, 0.526633084, 0.215582326], [0.394048154, 0.392151684, 0.213800162]
@@ -53,12 +53,12 @@ Response:
 ```
 
 ##### Classify
-Request:
+###### Request
 ```
 curl -d '{"signature_name" :"serving_default", "examples": [{"x":[1.0,2.0,5.0,0.3]}] }' -X POST http://localhost:8501/v1/models/myiris:classify
 ```
 
-Response:
+###### Response
 ```
 {
     "results": [[["Iris-versicolor", 0.526633084], ["Iris-setosa", 0.257784516], ["Iris-virginica", 0.215582326]]
